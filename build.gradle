@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.binomo'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.10
+
+repositories {
+    jcenter()
+}
+
+
+dependencies {
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.0'
+    testCompile 'org.projectlombok:lombok:1.18.0'
+
+    testCompile group: 'org.testcontainers', name: 'testcontainers', version: '1.8.0'
+    testCompile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
+
+    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    testCompile 'io.nats:jnats:2.0.0'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
